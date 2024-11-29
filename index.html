@@ -17,10 +17,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            background: url('screen.png') no-repeat center center fixed; /* screen 이미지를 배경으로 */
+            justify-content: flex-start; /* 내용물을 위쪽으로 정렬 */
+            background: url('screen.png') no-repeat center center fixed; /* 배경 이미지 */
             background-size: cover;
             font-family: Arial, sans-serif;
+            color: #fff; /* 기본 텍스트 색상 */
+        }
+        /* 메인 텍스트 스타일 */
+        .main-text {
+            margin-top: 30px; /* 상단 여백 */
+            font-size: 24px; /* 텍스트 크기 조정 */
+            text-align: center;
         }
         /* 버튼 컨테이너 */
         .button-container {
@@ -28,7 +35,8 @@
             flex-direction: row;
             justify-content: center;
             gap: 20px; /* 버튼 간격 */
-            margin-top: 20px;
+            margin-top: auto; /* 버튼을 아래로 정렬 */
+            margin-bottom: 30px; /* 하단 여백 */
         }
         /* 버튼 스타일 */
         .button {
@@ -55,8 +63,9 @@
     </style>
 </head>
 <body>
-    <h1 style="color: #fff; text-align: center;">딴지 - 배송선물 거래서비스</h1>
-    <p style="color: #fff; text-align: center;">아래 버튼을 클릭하여 앱을 다운로드하세요.</p>
+    <!-- 메인 텍스트 -->
+    <h1 class="main-text">배송선물 거래서비스</h1>
+    <p class="main-text">아래 버튼을 클릭하여 앱을 다운로드하세요.</p>
     <!-- 버튼 컨테이너 -->
     <div class="button-container">
         <!-- Android 버튼 -->

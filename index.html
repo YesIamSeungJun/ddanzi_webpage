@@ -17,17 +17,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* 내용물을 위쪽으로 정렬 */
-            background: url('screen.png') no-repeat center center fixed; /* 배경 이미지 */
-            background-size: cover;
+            justify-content: space-between; /* 위아래로 간격 배분 */
+            background-color: #000; /* 검은 배경 */
             font-family: Arial, sans-serif;
-            color: #fff; /* 기본 텍스트 색상 */
+            color: #fff;
         }
-        /* 메인 텍스트 스타일 */
-        .main-text {
-            margin-top: 30px; /* 상단 여백 */
-            font-size: 24px; /* 텍스트 크기 조정 */
+        /* 상단 로고 및 텍스트 */
+        .header {
+            margin-top: 20px;
             text-align: center;
+        }
+        .header img {
+            width: 200px; /* 이미지 크기 조정 */
+            height: auto;
+        }
+        .header h1 {
+            margin: 10px 0 0 0;
+            font-size: 24px;
         }
         /* 버튼 컨테이너 */
         .button-container {
@@ -35,7 +41,6 @@
             flex-direction: row;
             justify-content: center;
             gap: 20px; /* 버튼 간격 */
-            margin-top: auto; /* 버튼을 아래로 정렬 */
             margin-bottom: 30px; /* 하단 여백 */
         }
         /* 버튼 스타일 */
@@ -60,12 +65,22 @@
             transform: scale(1.1); /* 버튼 확대 효과 */
             background-color: rgba(255, 255, 255, 0.2); /* 호버 시 배경 강조 */
         }
+        /* 안내 문구 */
+        .info-text {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- 메인 텍스트 -->
-    <h1 class="main-text">배송선물 거래서비스</h1>
-    <p class="main-text">아래 버튼을 클릭하여 앱을 다운로드하세요.</p>
+    <!-- 상단 로고 및 텍스트 -->
+    <div class="header">
+        <img src="screen.png" alt="딴지 로고">
+        <h1>배송선물 거래서비스</h1>
+    </div>
+    <!-- 안내 문구 -->
+    <p class="info-text">아래 버튼을 클릭하여 앱을 다운로드하세요.</p>
     <!-- 버튼 컨테이너 -->
     <div class="button-container">
         <!-- Android 버튼 -->

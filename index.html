@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"> <!-- Google 인증 메타 태그 -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE">
     <meta name="description" content="딴지 - 배송선물 거래서비스. iOS 및 Android 앱 다운로드 링크 제공.">
     <meta name="robots" content="index, follow">
     <title>딴지 - 배송선물 거래서비스</title>
@@ -15,38 +15,53 @@
             width: 100%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #000; /* 검은색 배경 */
-            overflow: hidden;
+            background-color: #f4f4f4; /* 밝은 회색 배경 */
+            color: #333;
+            font-family: Arial, sans-serif;
         }
         /* 이미지 스타일 */
         #background-image {
             max-width: 100%;
-            max-height: 100%;
+            height: auto;
+        }
+        /* 버튼 스타일 */
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px;
+            padding: 0; /* 이미지 자체가 버튼 역할을 하므로 패딩 제거 */
+            width: auto;
+            height: auto;
+            background-color: transparent; /* 배경색 제거 */
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s; /* 클릭 시 애니메이션 */
+        }
+        .button img {
+            max-width: 250px; /* 이미지 최대 크기 */
+            height: auto;
+        }
+        .button:hover {
+            transform: scale(1.05); /* 버튼 확대 효과 */
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            
-            // iOS 사용자인 경우
-            if (/iPhone|iPad|iPod/i.test(userAgent)) {
-                window.location.href = "https://apps.apple.com/kr/app/%EB%94%B4%EC%A7%80-%EB%B0%B0%EC%86%A1%EC%84%A0%EB%AC%BC-%EA%B1%B0%EB%9E%98-%EC%84%9C%EB%B9%84%EC%8A%A4/id6508169572";
-            }
-            // Android 사용자인 경우
-            else if (/android/i.test(userAgent)) {
-                window.location.href = "https://play.google.com/store/apps/details?id=co.orange.ddanzi&hl=ko";
-            }
-            // 다른 기기인 경우
-            else {
-                window.location.href = "https://brawny-guan-098.notion.site/d1259ed5fdfd489eb6cc23a4312c13a0?pvs=4";
-            }
-        });
-    </script>
 </head>
 <body>
     <!-- 이미지 추가 -->
     <img id="background-image" src="screen.png" alt="딴지 - 배송선물 거래서비스">
+    <h1>딴지 - 배송선물 거래서비스</h1>
+    <p>아래 버튼을 클릭하여 앱을 다운로드하세요.</p>
+    <!-- 버튼 -->
+    <a href="https://play.google.com/store/apps/details?id=co.orange.ddanzi&hl=ko" class="button">
+        <img src="android.png" alt="Google Play 스토어">
+    </a>
+    <a href="https://apps.apple.com/kr/app/%EB%94%B4%EC%A7%80-%EB%B0%B0%EC%86%A1%EC%84%A0%EB%AC%BC-%EA%B1%B0%EB%9E%98-%EC%84%9C%EB%B9%84%EC%8A%A4/id6508169572" class="button">
+        <img src="apple.png" alt="Apple 앱 스토어">
+    </a>
 </body>
 </html>
